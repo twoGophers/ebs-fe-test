@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "jest"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.5.0",
@@ -20,6 +21,10 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.13.0",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.1.0",
+    "@types/jest": "^29.5.14",
+    "@types/mocha": "^10.0.10",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
     "@types/react-star-ratings": "^2.3.3",
@@ -29,6 +34,8 @@
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-react-refresh": "^0.4.14",
     "globals": "^15.11.0",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
     "postcss": "^8.4.49",
     "sass-embedded": "^1.82.0",
     "tailwindcss": "^3.4.16",
