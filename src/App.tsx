@@ -11,6 +11,7 @@ export default function App() {
 
   const dispatch = useAppDispatch();
   const { catalog, status } = useAppSelector((state) => state.catalog);
+  const { items } = useAppSelector(state => state.cart);
 
   const [loading, setLoading] = useState(true);
 
@@ -19,7 +20,7 @@ export default function App() {
       try {
         await dispatch(getCatalog());
       } catch (error) {
-        console.error("Ошибка загрузки данных", error);
+        console.error("Error loading products", error);
       } finally {
         setLoading(false);
       }
@@ -29,27 +30,15 @@ export default function App() {
   }, [dispatch]);
 
   if (loading) {
-    return (
-      <div className="container mx-auto text-center py-16">
-        <h1>Загрузка данных...</h1>
-      </div>
-    );
+    return <div className="container mx-auto text-center py-16">Loading...</div>;
   }
 
-  if( status !== 200) {
-    return (
-      <div className="container mx-auto text-center py-16">
-        <h1>Ошибка загрузки данных { status } </h1>
-      </div>
-    );
+  if (status !== 200) {
+    return <div className="container mx-auto text-center py-16">Error: {status}</div>;
   }
 
-  if (catalog?.data?.length === 0) {
-    return (
-      <div className="container mx-auto text-center py-16">
-        <h1>Каталог пуст</h1>
-      </div>
-    );
+  if (catalog.length === 0) {
+    return <div className="container mx-auto text-center py-16">Catalog is empty</div>;
   }
   
 
@@ -76,14 +65,16 @@ export default function App() {
                 Cart
               </NavLink>
             </nav>
-            <div className="flex flex-row h-full items-center ">
-              <span className="w-10 h-10 "> 
-                <Icon name={'cart'} />
-              </span>
-              <span className="text-lg">
-                0
-              </span>
-            </div>
+            <NavLink to="/cart">
+              <div className="flex flex-row h-full items-center ">
+                <span className="w-10 h-10 "> 
+                  <Icon name={'cart'} />
+                </span>
+                <span className="text-lg">
+                  { items.length }
+                </span>
+              </div>
+            </NavLink>
           </div>
 
         </header>
