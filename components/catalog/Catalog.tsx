@@ -1,3 +1,4 @@
+import React from 'react';
 import { useMemo, useState, useEffect, useRef } from 'react';
 import { CatalogProps } from '../../types/catalog';
 import CatalogItem from '../card/Card';

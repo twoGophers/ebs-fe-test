@@ -2,11 +2,9 @@
   "compilerOptions": {
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo",
     "target": "ES2022",
+    "lib": ["ES2023"],
     "module": "ESNext",
     "skipLibCheck": true,
-    "types": ["jest"],
-    "lib": ["dom", "esnext"],
-    "jsx": "react",
 
     /* Bundler mode */
     "moduleResolution": "Bundler",
@@ -22,6 +20,5 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true
   },
-  "include": ["src", "**/*.test.ts", "**/*.test.tsx", "vite.config.ts", "components/card/Card.test.tsx"]
-
+  "include": ["vite.config.ts"]
 }

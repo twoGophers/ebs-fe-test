@@ -1,9 +1,10 @@
+import React from 'react';
 import { useAppDispatch, useAppSelector } from '../../store/hooks';
 import Card from '../card/Card';
 import { removeAllCart } from '../../store/slices/cart'
 
 
-export default function Cart() {
+const Cart: React.FC = () => {
   const dispatch = useAppDispatch()
 
   const { items } = useAppSelector((state) => state.cart);
@@ -41,3 +42,5 @@ export default function Cart() {
     </>
   )
 }
+
+export default Cart;

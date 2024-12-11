@@ -1,5 +1,11 @@
 
-export default function Icon({ name }: any) {
+import React from 'react';
+
+interface IconProps {
+  name: string;
+}
+
+const Icon: React.FC<IconProps> = ({ name }: any) => {
   return (
     <div>
       {
@@ -16,3 +22,5 @@ export default function Icon({ name }: any) {
     </div>
   )
 }
+
+export default Icon;

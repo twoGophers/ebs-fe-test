@@ -134,3 +134,16 @@ We will assess your work based on:
 - [Jest Testing Framework](https://jestjs.io/docs/getting-started)
 - [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)
 - [Clean Code JavaScript](https://github.com/ryanmcdermott/clean-code-javascript)
+
+
+### My comment in this task
+- I use redux, how local storage instead of Context
+- Production save in local storage
+- Maked the application responsive for different screen sizes
+- Write logic
+
+### Negative comment
+- I haven't done the navigation with limit staging, which is very good practice. 
+It's very late now, and I just started writing this test in the evening. 
+If I had more time, I will do a limit production with a GET request, and I can write the logic for the GET categories.
+- I didn't write the tests because I've never written them. I've tried, but it's pretty terrible for me.
