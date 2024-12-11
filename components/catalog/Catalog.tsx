@@ -1,6 +1,8 @@
-import React from 'react'
 
-export default function Catalog() {
+export default function Catalog({ catalog }) {
+
+  console.log(catalog);
+  
   return (
     <div>Catalog</div>
   )
